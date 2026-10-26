@@ -1,0 +1,1 @@
+Agrega aquí las siete capturas reales requeridas por el parcial (01-login.png a 07-supabase.png). No se generaron capturas porque aún falta configurar Supabase y ejecutar la app en un dispositivo/emulador.
