@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Mi Tienda", "slug": "parcial-mi-tienda", "scheme": "mitienda", "version": "1.0.0", "orientation": "portrait",
+    "plugins": ["expo-router", "expo-secure-store", ["expo-sqlite", { "useSQLCipher": false }]],
+    "experiments": { "typedRoutes": true },
+    "android": { "package": "com.parcial.mitienda" },
+    "ios": { "bundleIdentifier": "com.parcial.mitienda" }
+  }
+}
