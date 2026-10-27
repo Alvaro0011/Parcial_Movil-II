@@ -2,8 +2,8 @@
 
 App móvil de inventario con Expo, TypeScript, Expo Router, SQLite/Drizzle y Supabase.
 
-**Estudiante:** [Alvaro Javier Pinto Sierra]  
-**Código:** [0182220114]
+**Estudiante:** Alvaro Javier Pinto Sierra
+**Código:** 0182220114
 
 ## Configuración
 
@@ -11,7 +11,9 @@ App móvil de inventario con Expo, TypeScript, Expo Router, SQLite/Drizzle y Sup
 2. Copia `.env.example` como `.env` y completa `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` desde tu proyecto. Usa la clave `sb_publishable_...`; nunca uses `service_role` ni una secret key. No publiques `.env`.
 3. En el SQL Editor de Supabase ejecuta el contenido de [`supabase.sql`](supabase.sql).
 4. En Supabase Authentication, desactiva la confirmación por correo del proveedor Email para que el alta inicie sesión inmediatamente.
-5. Ejecuta `npx expo start` y abre el proyecto con Expo Go en un dispositivo compatible.
+5. Ejecuta `npx expo start --clear` y escanea el QR con Expo Go actualizado. El proyecto usa Expo SDK 57; si Expo Go muestra una incompatibilidad, actualízalo desde Play Store y vuelve a iniciar Metro.
+
+Para abrirlo en el teléfono, el equipo y el teléfono deben estar en la misma red Wi-Fi. Ejecuta `npx expo start --lan --clear`; si estás usando datos móviles o la red bloquea conexiones locales, usa `npx expo start --tunnel`.
 
 La base local se prepara con Drizzle al iniciar la app. Para regenerar migraciones luego de cambiar el esquema: `npx drizzle-kit generate`.
 
