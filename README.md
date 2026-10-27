@@ -8,7 +8,7 @@ App móvil de inventario con Expo, TypeScript, Expo Router, SQLite/Drizzle y Sup
 ## Configuración
 
 1. Instala Node.js y ejecuta `npm install`.
-2. Copia `.env.example` como `.env` y completa `EXPO_PUBLIC_SUPABASE_URL` y `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` desde tu proyecto. No publiques `.env`; en la app usa solo la publishable key.
+2. Copia `.env.example` como `.env` y completa `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` desde tu proyecto. Usa la clave `sb_publishable_...`; nunca uses `service_role` ni una secret key. No publiques `.env`.
 3. En el SQL Editor de Supabase ejecuta el contenido de [`supabase.sql`](supabase.sql).
 4. En Supabase Authentication, desactiva la confirmación por correo del proveedor Email para que el alta inicie sesión inmediatamente.
 5. Ejecuta `npx expo start` y abre el proyecto con Expo Go en un dispositivo compatible.
@@ -23,6 +23,10 @@ La base local se prepara con Drizzle al iniciar la app. Para regenerar migracion
 - Resumen de unidades, valor, número de productos y estado de sincronización.
 
 La eliminación es local y no se propaga a Supabase; el parcial excluye los borrados sincronizados. La sincronización disponible aplica el flujo sencillo solicitado y no resuelve conflictos de edición simultánea de un mismo producto.
+
+## Verificación de Supabase
+
+La consulta REST a `public.products` respondió `PGRST205` (“Could not find the table”). La publishable key llegó al servicio, pero la tabla todavía no está creada o no se ha actualizado el esquema de la API. Ejecuta `supabase.sql` en el SQL Editor del proyecto antes de probar el inventario y la sincronización. La key real va solo en `.env`, que está excluido de Git.
 
 ## Capturas
 
