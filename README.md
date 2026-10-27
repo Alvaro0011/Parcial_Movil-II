@@ -28,7 +28,7 @@ La eliminación es local y no se propaga a Supabase; el parcial excluye los borr
 
 ## Verificación de Supabase
 
-La consulta REST a `public.products` respondió `PGRST205` (“Could not find the table”). La publishable key llegó al servicio, pero la tabla todavía no está creada o no se ha actualizado el esquema de la API. Ejecuta `supabase.sql` en el SQL Editor del proyecto antes de probar el inventario y la sincronización. La key real va solo en `.env`, que está excluido de Git.
+La última consulta REST a `public.products` respondió HTTP 200 y confirmó las columnas que usa la app (`id`, `user_id`, `client_id`, `name`, `quantity`, `price`, `updated_at` y `created_at`). La tabla ya está visible en la API. Para completar la prueba de punta a punta, inicia sesión en la app, sincroniza un producto y confirma que aparece en la tabla de Supabase. La publishable key real va solo en `.env`, que está excluido de Git.
 
 ## Capturas
 
