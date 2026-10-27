@@ -9,7 +9,7 @@ App móvil de inventario con Expo, TypeScript, Expo Router, SQLite/Drizzle y Sup
 
 1. Instala Node.js y ejecuta `npm install`.
 2. Copia `.env.example` como `.env` y completa `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` desde tu proyecto. Usa la clave `sb_publishable_...`; nunca uses `service_role` ni una secret key. No publiques `.env`.
-3. En el SQL Editor de Supabase ejecuta el contenido de [`supabase.sql`](supabase.sql).
+3. Entra al proyecto Supabase `wiuhbolqdvybusidequb` y ejecuta el contenido de [`supabase.sql`](supabase.sql) en el SQL Editor. El script se puede volver a ejecutar sin duplicar la tabla ni las políticas.
 4. En Supabase Authentication, desactiva la confirmación por correo del proveedor Email para que el alta inicie sesión inmediatamente.
 5. Ejecuta `npx expo start --clear` y escanea el QR con Expo Go actualizado. El proyecto usa Expo SDK 57; si Expo Go muestra una incompatibilidad, actualízalo desde Play Store y vuelve a iniciar Metro.
 
