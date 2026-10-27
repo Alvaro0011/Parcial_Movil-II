@@ -2,8 +2,8 @@
 
 App móvil de inventario con Expo, TypeScript, Expo Router, SQLite/Drizzle y Supabase.
 
-**Estudiante:** [Escribe tu nombre completo]  
-**Código:** [Escribe tu código]
+**Estudiante:** [Alvaro Javier Pinto Sierra]  
+**Código:** [0182220114]
 
 ## Configuración
 
